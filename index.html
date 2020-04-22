@@ -1,0 +1,728 @@
+<!DOCTYPE html>
+<html class="
+
+">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0,viewport-fit=cover">
+
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" type="text/css" href="dayu/contact.css">
+    <script type="text/javascript" src="./jquery.min.js"></script>
+    <!-- <link rel="stylesheet" type="text/css" href="dayu/contact.css"> -->
+    <script src="./tj_base64.min.js"></script>
+    <script type="text/javascript" src="./cacheCode.js?r=1587106622121"></script>
+
+
+    <style>
+        .tz {
+            width: 72%;
+            height: 46px;
+            background: yellow;
+            border-radius: 10px;
+            border: 1px solid red;
+            line-height: 46px;
+            margin-left: 9%;
+        }
+        
+        .wxbtn {
+            width: 200px;
+            height: 35px;
+            background: yellow;
+            border-radius: 10px;
+            border: 1px solid red;
+            line-height: 35px;
+        }
+        
+        .wxbtn span {
+            color: red;
+            font-weight: bolder;
+            font-size: large;
+        }
+        
+        .xkjht {
+            opacity: 0.5;
+            position: absolute;
+            left: 30%;
+            top: 1%;
+        }
+        
+        .xkp {
+            font-size: 18px;
+            line-height: 2.3rem;
+            /*text-align: justify;*/
+            /*text-indent: 3rem;*/
+            max-width: 100%;
+            min-height: 1em;
+            font-family: -apple-system-font, BlinkMacSystemFont, Arial, sans-serif;
+            letter-spacing: 0.544px;
+            text-align: center;
+            overflow-wrap: break-word;
+        }
+        
+        .xkppl {
+            font-size: 13px;
+            /*text-align: justify;*/
+            /*text-indent: 3rem;*/
+            max-width: 100%;
+            min-height: 1.3em;
+            font-family: -apple-system-font, BlinkMacSystemFont, Arial, sans-serif;
+            letter-spacing: 0.544px;
+            text-align: center;
+            overflow-wrap: break-word;
+            padding-top: 5px;
+        }
+        
+        .xkp1 {
+            text-indent: 2rem;
+            text-align: justify;
+        }
+        
+        .xkp2 {
+            text-indent: 0.6rem;
+            text-align: justify;
+        }
+        
+        .xkp img {
+            margin: 5px 0;
+            letter-spacing: 0.544px;
+            overflow-wrap: break-word;
+            visibility: visible !important;
+            width: 100% !important;
+            height: auto !important;
+        }
+        
+        .xkred {
+            font-size: 20px;
+            color: red;
+            font-weight: bold;
+        }
+        
+        .xkredT {
+            font-size: 23px;
+            color: red;
+            font-weight: bolder;
+        }
+        
+        .xkblack {
+            font-size: 20px;
+            color: #000000;
+            font-weight: bold;
+        }
+        
+        .xkFontVW {
+            font-size: 3.8vw;
+            color: #000000;
+            font-weight: bolder;
+        }
+        
+        .xkredWhite {
+            font-weight: bolder;
+            color: #f0f0f0;
+            background-color: #C00000;
+            font-size: 23px;
+        }
+        
+        #bottom {
+            z-index: 999;
+            position: fixed;
+            bottom: 0px;
+            left: 0px;
+            background: #fff;
+            width: 100%;
+        }
+        
+        #bottom>img {
+            width: 100%;
+        }
+        
+        .bottom_wx_code {
+            position: relative;
+        }
+        
+        .bottom_wx_code img {
+            width: 20%;
+            position: absolute;
+            bottom: 5px;
+            left: 5%;
+        }
+        
+        .qaiks {
+            display: none;
+            background: rgba(0, 0, 0, .7);
+            position: fixed;
+            z-index: 99999999;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            text-align: center;
+        }
+        
+        .qaiks .oiaks {
+            background: #fff;
+            position: absolute;
+            margin: auto;
+            right: 0;
+            bottom: 250px;
+            left: 0;
+            width: 280px;
+            height: 150px;
+            border-radius: 5px;
+        }
+        
+        .qaiks .wwwkas {
+            font-size: 14px;
+        }
+        
+        .qaiks div {
+            margin-top: 14px;
+        }
+        
+        .qaiks .kokas {
+            border-top: 1px solid #f1f1f1;
+            padding-top: 10px;
+            color: #3AB1FF;
+            font-size: 16px;
+        }
+    </style>
+    <title></title>
+    <!---请求录制 by gabyliu-->
+    <!--todo 这里要加cookie或actionType才加载 -->
+
+    <style>
+        .radius_avatar {
+            display: inline-block;
+            background-color: #fff;
+            padding: 3px;
+            border-radius: 50%;
+            -moz-border-radius: 50%;
+            -webkit-border-radius: 50%;
+            overflow: hidden;
+            vertical-align: middle
+        }
+        
+        .radius_avatar img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            -moz-border-radius: 50%;
+            -webkit-border-radius: 50%;
+            background-color: #eee
+        }
+        
+        .rich_media_inner {
+            word-wrap: break-word;
+            -webkit-hyphens: auto;
+            -ms-hyphens: auto;
+            hyphens: auto
+        }
+        
+        .rich_media_area_primary {
+            padding: 20px 16px 12px;
+            padding: calc(20px + constant(safe-area-inset-top)) calc(16px + constant(safe-area-inset-right)) 12px calc(16px + constant(safe-area-inset-left));
+            padding: calc(20px + env(safe-area-inset-top)) calc(16px + env(safe-area-inset-right)) 12px calc(16px + env(safe-area-inset-left));
+            background-color: #fafafa
+        }
+        
+        .rich_media_area_primary.voice {
+            padding-top: 66px
+        }
+        
+        .rich_media_area_primary .weui-loadmore_line {
+            border-color: #d8d8d8
+        }
+        
+        .rich_media_area_primary .weui-loadmore_line .weui-loadmore__tips {
+            color: #888;
+            background-color: #fafafa
+        }
+        
+        .rich_media_area_extra {
+            padding: 0 16px 16px;
+            padding: 0 calc(16px + constant(safe-area-inset-right)) calc(16px + constant(safe-area-inset-bottom)) calc(16px + constant(safe-area-inset-left));
+            padding: 0 calc(16px + env(safe-area-inset-right)) calc(16px + env(safe-area-inset-bottom)) calc(16px + env(safe-area-inset-left))
+        }
+        
+        .rich_media_extra {
+            padding-top: 30px
+        }
+        
+        .mpda_bottom_container .rich_media_extra {
+            padding-top: 24px
+        }
+        
+        .mpda_bottom_container .rich_media_extra .mpad_more_list {
+            right: -10px
+        }
+        
+        .rich_media_title {
+            font-size: 22px;
+            line-height: 1.4;
+            margin-bottom: 14px
+        }
+        
+        @supports(-webkit-overflow-scrolling:touch) {
+            .rich_media_title {
+                font-weight: 700
+            }
+        }
+        
+        .rich_media_meta_list {
+            margin-bottom: 22px;
+            line-height: 20px;
+            font-size: 0;
+            word-wrap: break-word;
+            word-break: break-all
+        }
+        
+        .rich_media_meta_list em {
+            font-style: normal
+        }
+        
+        .rich_media_meta {
+            display: inline-block;
+            vertical-align: middle;
+            margin: 0 10px 10px 0;
+            font-size: 15px;
+            -webkit-tap-highlight-color: rgba(0, 0, 0, 0)
+        }
+        
+        .rich_media_meta.icon_appmsg_tag {
+            margin-right: 4px
+        }
+        
+        .rich_media_meta.appmsg_title_tag {
+            margin-right: 8px
+        }
+        
+        .rich_media_meta.meta_tag_text {
+            margin-right: 0
+        }
+        
+        .rich_media_meta_primary {
+            display: block;
+            margin-bottom: 10px;
+            font-size: 15px
+        }
+        
+        .meta_original_tag {
+            padding: 0 .5em;
+            font-size: 12px;
+            line-height: 1.4;
+            background-color: #f2f2f2;
+            color: #888
+        }
+        
+        .meta_enterprise_tag img {
+            width: 30px;
+            height: 30px!important;
+            display: block;
+            position: relative;
+            margin-top: -3px;
+            border: 0
+        }
+        
+        .rich_media_meta_link {
+            color: #576b95
+        }
+        
+        .rich_media_meta_text {
+            color: rgba(0, 0, 0, 0.3)
+        }
+        
+        .rich_media_meta_text.rich_media_meta_split {
+            padding-left: 10px
+        }
+        
+        .rich_media_meta_text.rich_media_meta_split:before {
+            position: absolute;
+            top: 50%;
+            left: 0;
+            margin-top: -6px;
+            content: ' ';
+            display: block;
+            border-left: 1px solid #888;
+            width: 200%;
+            height: 130%;
+            box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            -webkit-box-sizing: border-box;
+            -webkit-transform: scale(0.5);
+            transform: scale(0.5);
+            -webkit-transform-origin: 0 0;
+            transform-origin: 0 0
+        }
+        
+        .rich_media_meta_text.article_modify_tag {
+            position: relative
+        }
+        
+        .rich_media_meta_nickname {
+            position: relative
+        }
+        
+        .rich_media_thumb_wrp {
+            margin-bottom: 6px
+        }
+        
+        .rich_media_thumb_wrp .original_img_wrp {
+            display: block
+        }
+        
+        .rich_media_thumb {
+            display: block;
+            width: 100%
+        }
+        
+        .rich_media_content {
+            overflow: hidden;
+            color: #333;
+            font-size: 17px;
+            word-wrap: break-word;
+            -webkit-hyphens: auto;
+            -ms-hyphens: auto;
+            hyphens: auto;
+            text-align: justify;
+            position: relative;
+            z-index: 0
+        }
+        
+        .rich_media_content * {
+            max-width: 100%!important;
+            box-sizing: border-box!important;
+            -webkit-box-sizing: border-box!important;
+            word-wrap: break-word!important
+        }
+        
+        .rich_media_content p {
+            clear: both;
+            min-height: 1em
+        }
+        
+        .rich_media_content em {
+            font-style: italic
+        }
+        
+        .rich_media_content fieldset {
+            min-width: 0
+        }
+        
+        .rich_media_content .list-paddingleft-1,
+        .rich_media_content .list-paddingleft-2,
+        .rich_media_content .list-paddingleft-3 {
+            padding-left: 2.2em
+        }
+        
+        .rich_media_content .list-paddingleft-1 .list-paddingleft-2,
+        .rich_media_content .list-paddingleft-2 .list-paddingleft-2,
+        .rich_media_content .list-paddingleft-3 .list-paddingleft-2 {
+            padding-left: 30px
+        }
+        
+        .rich_media_content .list-paddingleft-1 {
+            padding-left: 1.2em
+        }
+        
+        .rich_media_content .list-paddingleft-3 {
+            padding-left: 3.2em
+        }
+        
+        .rich_media_content .code-snippet,
+        .rich_media_content .code-snippet__fix {
+            max-width: 1000%!important
+        }
+        
+        .rich_media_content .code-snippet *,
+        .rich_media_content .code-snippet__fix * {
+            max-width: 1000%!important
+        }
+    </style>
+    <style>
+
+    </style>
+    <!--[if lt IE 9]>
+<link rel="stylesheet" type="text/css" href="//res.wx.qq.com/mmbizwap/zh_CN/htmledition/style/page/appmsg_new/pc4c4161.css">
+<![endif]-->
+</head>
+
+<body id="activity-detail" class="zh_CN mm_appmsg discuss_tab appmsg_skin_default appmsg_style_default not_in_mm">
+    <!-- <span style="color: red">currentVersion </span>
+                <div style="color:red;padding-left: 50px;">is IOS</div>
+                        <span style="color: red">111</span>
+        <span style="color: red">222170009FF</span> -->
+
+
+
+
+    <div id="js_article" class="rich_media">
+
+        <div id="js_top_ad_area" class="top_banner"></div>
+
+        <div class="rich_media_inner">
+
+
+
+            <div id="page-content" class="rich_media_area_primary">
+
+                <div class="rich_media_area_primary_inner">
+
+
+
+
+
+
+                    <div id="img-content" class="rich_media_wrp">
+
+
+
+
+
+
+                        <div class="rich_media_content " id="js_content" style="visibility: visible;">
+
+
+
+
+
+
+                            <section label="Edit by 135editor.com" style="font-size: 16px;">
+                                <section data-role="outer" label="Powered by 135editor.com" style="font-size:16px;">
+                                    <p><br></p>
+                                    <p>
+
+                                        <video muted poster="http://yh.mie7.cn/BZzy/video/zyz-tf.jpg" src="http://yh.mie7.cn/BZzy/video/zyz-tf.mp4" controls="controls" autoplay="autoplay" width="100%"></video>
+
+
+                                    </p>
+
+                                    <img src="./image/04.gif" alt="" style="width: 100%;" onclick="popup()">
+                                    <p style="text-align: center;"><img class="rich_pages " data-ratio="0.509518477043673" data-s="300,640" data-type="jpeg" data-w="893" src="./image/01.jpg" style="width: auto !important; height: auto !important; visibility: visible !important;" _width="auto"
+                                            crossorigin="anonymous" data-fail="0"></p>
+                                    <p style="text-align: center;"><img class="rich_pages " data-ratio="0.509518477043673" data-s="300,640" data-type="jpeg" data-w="893" src="./image/02.jpg" style="width: auto !important; height: auto !important; visibility: visible !important;" _width="auto"
+                                            crossorigin="anonymous" data-fail="0"></p>
+                                    <p><br></p>
+                                    <p style="text-align: center;"><img class="rich_pages " data-ratio="0.49558823529411766" data-s="300,640" data-type="jpeg" data-w="680" src="./image/03.jpg" style="width: auto !important; height: auto !important; visibility: visible !important;"
+                                            _width="auto" crossorigin="anonymous" data-fail="0"></p>
+
+                                    <!-- <p style="text-align: center;">                      
+                      <img class="rich_pages " data-ratio="0.534375" data-s="300,640" data-type="jpeg" data-w="640" src="./image/111.jpg" style="width: auto !important; height: auto !important; visibility: visible !important;" _width="auto"  crossorigin="anonymous" data-fail="0"></p> -->
+
+                                    <img src="./image/04.gif" alt="" style="width: 100%;" onclick="popup()">
+
+                                    <p style="text-align: center;"><span style="color: #C00000;font-size: 20px;"><p style="text-align: center;"><img class="rich_pages " data-ratio="1.2063291139240506" data-s="300,640" data-type="jpeg" data-w="790" src="./image/04.jpg" style="width: auto !important; height: auto !important; visibility: visible !important;" _width="auto"  crossorigin="anonymous" data-fail="0"></p><p><br></p><p style="text-align: center;"><span style="color: #C00000;font-size: 20px;"><img class="rich_pages  __bg_gif" data-ratio="0.5626911314984709" data-s="300,640" data-type="gif" data-w="327" src="./image/05.gif" style="width: auto !important; height: auto !important; visibility: visible !important;" _width="auto" src="hl-fwt_files/640.gif" data-order="0" data-fail="0"></p><p><br></p><p style="text-align: center;"><p style="text-align: center;"><img class="rich_pages " data-ratio="0.75" data-s="300,640" data-type="jpeg" data-w="732" src="./image/06.jpg" style="width: auto !important; height: auto !important; visibility: visible !important;" _width="auto"  crossorigin="anonymous" data-fail="0"></p><p><br></p>
+                    
+                    <!-- <img src="./image/3.jpg" alt="" style="width: 100%;"> -->
+                    
+                    <img src="./image/04.gif" alt="" style="width: 100%;"  onclick="popup()">
+                    <p style="text-align: center;"><span style="font-size: 20px;color: #C00000;"><img class="rich_pages " data-ratio="0.3812754409769335" data-s="300,640" data-type="jpeg" data-w="737" src="./image/07.jpg" style="width: auto !important; height: auto !important; visibility: visible !important;" _width="auto"  crossorigin="anonymous" data-fail="0"></p>
+                    <img src="./image/04.gif" alt="" style="width: 100%;"  onclick="popup()">
+                    
+                    <section data-role="paragraph"><p><br></p></section></section></section><p><br></p><p><br></p><p><br></p><p><br></p>
+				</div>	</div>
+            </div>
+        </div>
+    </div></div></div>
+
+
+
+    <div class="qaiks">
+      <div class="oiaks">
+        <div class="qkas">提示</div>
+            <div class="wwwkas">微信号已复制好，请在微信粘贴搜索</div>
+            
+           <div class="kokas" style="display: flex;">
+             <!-- <div style="flex: 1;" class="closea">取消</div> -->
+             <div style="flex: 1;" onclick="copyArticle()">确认</div>
+           </div>
+    
+            <!-- <div class="kokas" onclick="copyArticle()">确认</div> 
+            <div class="">取消</div>  -->
+      </div>
+    </div>
+    <div id="bottom" style="">
+      <div class="to_pc" style="padding-right: 6px; min-width: 100px;"> 
+          <img style="float:left;" src="./wxx.gif" width="69" height="73"> 
+      </div>
+      <div style="font-size:16px;line-height:160%; padding-top:5px;">
+          <div class="abc">
+              <div style="display: flex;text-align: center;">
+                  <div class="www" style="flex: 1;background: #fff;border-radius: 6px;font-size: 24px;height: 46px;
+                  line-height: 46px;">
+                 <script language="JavaScript">document.write(stxlwx);</script>
+                   </div>
+                  <div class="fc" style="flex: 1;text-align: center;">
+                     <div class="tz">点击复制</div>
+                   </div>
+               </div>
+          </div>
+          <div style="padding-top: 6px;">
+              <b style="color:red;font-weight: bold; font-size:large;padding-top: 5px;">点击复制微信号，即可跳转添加</b>
+          </div>
+      </div>
+  </div>
+         
+
+
+  
+          <div id="wechat" style="z-index: 9999999; left: 0px; right: 0px; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.6); border-radius: 0px;display: none;">
+            
+            <div class="contact popmol" style="top: 1%;">
+                 <img src="./image/b1.gif" style="width:80%;
+                 position: relative;
+                 left: 9%;">
+                   <div class="fda " style="position: absolute;bottom: 1%;right: 54%;font-size: 48px;width: 28%;">  <span class="statistics02 wx_click jumpWechat" style="display: block;">
+                    <!-- <script>document.write(wx_img)</script> -->
+                    </span></div>
+                    </div>
+                    <div onclick="closeP()" class="close_Mask" style="background-color: white;text-align: center;width: 80%;padding-top: 1%;font-size: 30px;
+    
+            left: 9%;">关闭</div>
+
+
+                </div>
+
+                <style>
+                    body {
+                        max-width: 750px;
+                        margin: 0 auto;
+                    }
+                    
+                    * {
+                        margin: 0;
+                        padding: 0;
+                    }
+                    
+                    .wechatsvg {
+                        position: fixed;
+                        bottom: 0px;
+                        width: 100%;
+                        left: 0;
+                    }
+                    
+                    .img {
+                        width: 100%;
+                    }
+                    
+                    div {
+                        position: relative;
+                    }
+                    
+                    .box {
+                        position: absolute;
+                        top: 8.08rem;
+                        left: 3.42rem;
+                        z-index: 1000;
+                    }
+                    
+                    .gvb img {
+                        width: 100%;
+                        @import;
+                        margin-top: 3%;
+                    }
+                    
+                    .plm {
+                        position: fixed;
+                        right: 2%;
+                        bottom: 34%;
+                        z-index: 8;
+                        width: 18%;
+                        -webkit-animation: plm 10s linear infinite;
+                    }
+                    
+                    @keyframes plm {
+                        25% {
+                            transform: translateY(25px);
+                        }
+                        50% {
+                            transform: translateY(0px);
+                        }
+                        75% {
+                            transform: translateY(-25px);
+                        }
+                        100% {
+                            transform: translateY(0px);
+                        }
+                    }
+                    
+                    .closeaa {
+                        position: fixed;
+                        top: 2%;
+                        right: 3%;
+                        z-index: 99;
+                    }
+                    
+                    .adCode {
+                        width: 100%;
+                    }
+                    
+                    .qtadCode img {
+                        width: 80%;
+                    }
+                    
+                    .floatcontact {
+                        max-width: 750px;
+                        margin: 0 auto;
+                    }
+                    
+                    .jumpWechat {
+                        display: block;
+                    }
+                </style>
+
+
+            </div>
+
+
+
+            <textarea id="awxh" style="opacity: 0;"></textarea>
+            <script type="text/javascript">
+                function closeP() {
+                    $("#wechat").fadeOut(200);
+                    $(".plm").fadeIn(200);
+                }
+
+                function popup() {
+                    $("#wechat").fadeIn(200);
+                    $(".plm").fadeOut(200);
+                }
+            </script>
+
+
+            <script type="text/javascript">
+                var zwxh = $(".J_wxno").html();
+                // var awxh = wxh.toString();
+                //   var zwxh = wxh.slice(24,35);
+                // var zwxh = wxh.substr(wxh.length-10);
+
+                // alert(zwxh);
+                //   console.log(wxh);
+                console.log(zwxh);
+
+                $("#awxh").empty();
+                $("#awxh").html(zwxh);
+                $(".fc").click(function() {
+                        $(".qaiks").css("display", "block");
+                    })
+                    // $(".closea").click(function(){
+                    //     $(".qaiks").css("display","none");
+                    // })
+                function copyArticle() {
+                    const range = document.createRange();
+                    range.selectNode(document.getElementById('awxh'));
+                    const selection = window.getSelection();
+                    if (selection.rangeCount > 0) selection.removeAllRanges();
+                    selection.addRange(range);
+                    document.execCommand('copy');
+                    // alert("复制成功")
+
+                    window.location.href = "weixin://";
+
+                }
+            </script>
+</body>
+
+</html>

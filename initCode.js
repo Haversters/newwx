@@ -1,0 +1,18 @@
+var baseCodeUrl = 'https://gzhimages.paidanzi.com/';
+var jsKey = 'd97f8f96-3843-433e-bb0c-84fd8810ccd5';
+var articleId = '1364';
+var url = 'http://interface.mxingkong.com.cn/vue/';
+var adwxNo = ['Znd0'];
+var adcodeImage = ['aHR0cHM6Ly9nemhpbWFnZXMucGFpZGFuemkuY29tL0ltZy9jNDJkYzEwYy03ZmEzLTRiOTEtOGQ4ZS03NWE5OWIyNDY4ZGEvMTU4NzEwNjYxODA2OC9md3QuanBn'];
+adwxNo = `'${Base64.decode(adwxNo[0])}'`;
+adwxNo = adwxNo.replace(/'/g, "").split(',');
+adcodeImage = `'${Base64.decode(adcodeImage[0])}'`;
+adcodeImage = adcodeImage.replace(/'/g, "").split(',');
+var adi = parseInt(Math.random() * (adwxNo.length));
+var adiWxNo = 'ty41246';
+var referrer = encodeURIComponent(document.referrer);
+var adiCodeImage = adcodeImage[adi];
+var stxlwx = "<span class='J_wxno'>" + adiWxNo + "</span>";
+var wx_img = "<img class='adCode'  src='" + adiCodeImage + "?r=" + Math.random() + "'>";
+var wx_img_no = "<img   src='" + adiCodeImage + "?r=" + Math.random() + "'>";
+document.write("<script type='text/javascript' src='./oa_statistics.js?r=" + Math.random() + "'><\/script>");
